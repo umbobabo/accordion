@@ -1,3 +1,3 @@
-# component-sections-card
+# accordion
 
-A composition to present available sections on the website.
+Accordion creates a list (eventually nested) and uses component-balloon to hide/show nested children.
