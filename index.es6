@@ -52,7 +52,8 @@ export default class Accordion extends React.Component {
       // Recursive part
       if (item.children && item.children.length > 0) {
         level++;
-        listItem = (<Balloon className={`accordion__level${level}`}
+        listItem = (<Balloon className={`accordionExpander`}
+            unstyled
             key={`${item.title}-${item.href}-level${level}`}
           >
           {listItem}

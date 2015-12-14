@@ -16,15 +16,10 @@
   text-decoration: none;
 }
 
-.accordion .balloon--not-visible .balloon-content {
+.accordionExpander--not-visible .content {
   display: none;
 }
 
-.accordion .balloon--visible .balloon-content {
-  display: block;
-}
-
-.accordion__link {
-  padding: var(--accordion__link-padding, 0.5em);
+.accordionExpander--visible .content {
   display: block;
 }
