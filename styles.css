@@ -7,13 +7,13 @@
   display: block;
 }
 
-.accordion > .list__item {
-  border-bottom: solid 2px var(--color-berlin);
+.accordion > .list__item:not(:last-child) {
+  border-bottom: solid 1px var(--color-london);
 }
 
 .accordion > .list__item,
 .accordion__link {
-  font-size: var(--text-size-step-0);
+  font-size: var(--text-size-step--1);
 }
 
 .accordion > .list__item {
@@ -23,7 +23,7 @@
 .accordion > .list__item .list__item {
   font-weight: normal;
   text-indent: 1em;
-  font-size: var(--text-size-step--1);
+  font-size: var(--text-size-step--2);
 }
 
 .accordion .list__item svg {

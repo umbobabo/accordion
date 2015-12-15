@@ -4,6 +4,7 @@ import React from 'react/addons';
 import chai from 'chai';
 import chaiSpies from 'chai-spies';
 chai.use(chaiSpies).should();
+import context from '../context';
 
 describe(`An Accordion`, () => {
   describe(`it's a React component`, () => {
@@ -11,7 +12,7 @@ describe(`An Accordion`, () => {
       Accordion.should.be.a('function').and.respondTo('render');
     });
     it('renders a React element', () => {
-      React.isValidElement(<Accordion/>).should.equal(true);
+      React.isValidElement(<Accordion list={context}/>).should.equal(true);
     });
   });
   // describe('Renders children as commanded', () => {
