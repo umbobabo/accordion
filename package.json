@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-accordion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Accordion component",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
@@ -165,11 +165,13 @@
     "parallelshell": "^2.0.0",
     "pre-commit": "^1.0.10",
     "react": "^0.14.0",
+    "react-dom": "^0.14.3",
     "sinon": "^1.17.1",
     "watchify": "^3.4.0"
   },
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "^0.14.0",
+    "react-dom": "^0.14.3"
   },
   "pre-commit": [
     "lint"
