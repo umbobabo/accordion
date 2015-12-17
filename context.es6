@@ -6,6 +6,20 @@ export default [
       {
         title: 'Latest updates',
         href: 'http://www.economistgroupmedia.com',
+        children: [
+          {
+            title: 'Latest updates',
+            href: 'http://www.economistgroupmedia1.com',
+          },
+          {
+            title: 'Latest updates',
+            href: 'http://www.economistgroupmedia2.com',
+          },
+          {
+            title: 'Latest updates',
+            href: 'http://www.economistgroupmedia3.com',
+          },
+        ],
       },
       {
         title: 'Britain',

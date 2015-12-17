@@ -18,8 +18,8 @@ export default class Accordion extends React.Component {
     return {};
   }
 
-  renderListContent(array) {
-    let level = 0;
+  renderListContent(array, level) {
+    level++;
     return array.map((item) => {
       let linkContents = item.text || item.title;
       let listItem = '';
@@ -51,7 +51,6 @@ export default class Accordion extends React.Component {
       }
       // Recursive part
       if (item.children && item.children.length > 0) {
-        level++;
         listItem = (<Balloon
             prefix="accordionExpander"
             className={`accordion__level${level}`}
@@ -60,7 +59,7 @@ export default class Accordion extends React.Component {
           >
           {listItem}
           <List>
-            {this.renderListContent(item.children)}
+            {this.renderListContent(item.children, level)}
           </List>
         </Balloon>);
       }
@@ -71,9 +70,10 @@ export default class Accordion extends React.Component {
 
   render() {
     const context = this.props.list;
+    const level = 0;
     return (
       <List className="accordion">
-        {this.renderListContent(context)}
+        {this.renderListContent(context, level)}
       </List>
     );
   }
