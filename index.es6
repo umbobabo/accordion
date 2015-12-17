@@ -63,7 +63,6 @@ export default class Accordion extends React.Component {
           </List>
         </Balloon>);
       }
-      level = 0;
       return listItem;
     });
   }
