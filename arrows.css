@@ -1,0 +1,15 @@
+.accordionExpander--visible > .link-button--icon > .link-button__group .Icon-down {
+  transform: rotate(180deg);
+}
+
+.accordion__link.link-button--icon {
+  position: relative;
+}
+
+.accordion .Icon-down {
+  position: absolute;
+  margin-top: -12px;
+  top: 50%;
+  right: 0px;
+  width: var(--navigation-icon-size, 28px);
+}

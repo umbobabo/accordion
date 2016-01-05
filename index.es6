@@ -28,6 +28,10 @@ export default class Accordion extends React.Component {
         key: `${item.title}-${item.href}`,
         unstyled: true,
       };
+      // Add the arrow down for expandable links
+      if (item.children && item.children.length > 0) {
+        item.meta = "down";
+      }
       if (item.meta) {
         commonProps.icon = {
           icon: item.meta,
