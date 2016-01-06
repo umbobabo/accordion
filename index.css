@@ -1,5 +1,6 @@
 @import "@economist/component-typography";
 @import "@economist/component-palette";
+@import "./arrows.css";
 
 .accordion {
   font-size: 1rem;
@@ -16,10 +17,10 @@
   text-decoration: none;
 }
 
-.accordionExpander--not-visible .content {
+.accordionExpander--not-visible > .content {
   display: none;
 }
 
-.accordionExpander--visible .content {
+.accordionExpander--visible > .content {
   display: block;
 }
