@@ -4,7 +4,7 @@ import React from 'react/addons';
 import chai from 'chai';
 import chaiSpies from 'chai-spies';
 chai.use(chaiSpies).should();
-import context from '../context';
+import context from '@economist/component-sections-card/context';
 
 describe(`An Accordion`, () => {
   describe(`it's a React component`, () => {
