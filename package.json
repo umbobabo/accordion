@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-accordion",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Accordion component",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
@@ -140,6 +140,8 @@
   },
   "devDependencies": {
     "@economist/component-devpack": "^3.6.0",
+    "@economist/component-icon": "^5.0.0",
+    "@economist/component-sections-card": "^1.0.7",
     "babel": "^5.8.23",
     "babelify": "^6.3.0",
     "browser-sync": "^2.8.2",
