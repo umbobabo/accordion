@@ -20,6 +20,7 @@ export default class Accordion extends React.Component {
 
   renderListContent(array, level) {
     level++;
+
     return array.map((item) => {
       let linkContents = item.text || item.title;
       let listItem = '';
@@ -28,16 +29,18 @@ export default class Accordion extends React.Component {
         key: `${item.title}-${item.href}`,
         unstyled: true,
       };
+      // Spread icon props.
+      if (item.icon || (item.children && item.children.length > 0)) {
+        commonProps.icon = {
+          ...item.icon,
+          size: '28px',
+        }
+      }
       // Add the arrow down for expandable links
       if (item.children && item.children.length > 0) {
-        item.meta = "down";
+        commonProps.icon.icon = "down";
       }
-      if (item.meta) {
-        commonProps.icon = {
-          icon: item.meta,
-          size: '28px',
-        };
-      }
+
       if (item.internal === false) {
         listItem = (
           <Button

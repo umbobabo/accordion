@@ -38,5 +38,5 @@
 
 .accordion .list__item svg,
 .accordion .list__item use {
-  fill: var(--accordion__icons-fill, var(--color-honolulu));
+  fill: var(--accordion__icons-fill, var(--color-chicago));
 }
