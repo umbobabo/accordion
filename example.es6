@@ -5,7 +5,7 @@ import Accordion from './index';
 context.media.map((mediaLink) => {
   mediaLink.icon = {
     useBackground: true,
-    color: 'honolulu',
+    color: 'chicago',
     icon: mediaLink.meta,
   };
   return mediaLink;
