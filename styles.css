@@ -31,11 +31,6 @@
   margin-right: 0.8em;
 }
 
-.accordion .list__item a {
-  align-items: center;
-  display: flex;
-}
-
 .accordion .list__item svg,
 .accordion .list__item use {
   fill: var(--accordion__icons-fill, var(--color-chicago));
