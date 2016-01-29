@@ -25,9 +25,9 @@ export default class Accordion extends React.Component {
       let linkContents = item.text || item.title;
       let listItem = '';
       const commonProps = {
-        href: item.href,
+        ...item,
         key: `${item.title}-${item.href}`,
-        unstyled: true,
+        unstyled: item.unstyled !== false,
       };
       // Spread icon props.
       if (item.icon || (item.children && item.children.length > 0)) {

@@ -31,6 +31,12 @@ const accordionContext = [
     title: 'Products',
     href: 'http://www.economist.com/digital',
   },
+  {
+    title: 'Subscribe',
+    href: 'https://subscriptions.economist.com/',
+    target: '_blank',
+    unstyled: false,
+  }
 ];
 
 export default (
