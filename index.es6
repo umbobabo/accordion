@@ -11,23 +11,15 @@ export default class Accordion extends React.Component {
     };
   }
 
-  targetIfNeeded({ internal }) {
-    if (internal === false) {
-      return { target: '_blank' };
-    }
-    return {};
-  }
-
   renderListContent(array, level) {
     level++;
 
-    return array.map((item) => {
-      let linkContents = item.text || item.title;
+    return array.map((item, i) => {
       let listItem = '';
+      let classNameList = ['accordion__link'];
       const commonProps = {
-        ...item,
-        key: `${item.title}-${item.href}`,
-        unstyled: item.unstyled !== false,
+        href: item.href,
+        key: `${i}`,
       };
       // Spread icon props.
       if (item.icon || (item.children && item.children.length > 0)) {
@@ -41,28 +33,33 @@ export default class Accordion extends React.Component {
         commonProps.icon.icon = "down";
       }
 
-      if (item.internal === false) {
-        listItem = (
-          <Button
-            className="accordion__link accordion__link--external"
-            {...commonProps}
-            target="_blank"
-          >
-            {linkContents}
-          </Button>
-        );
-      } else {
-        listItem = (<Button className="accordion__link" {...commonProps}>
-        {linkContents}
-        </Button>);
+      if (item.target) {
+        commonProps.target = item.target;
       }
+
+      if (item.target === "_blank"){
+        classNameList.push('accordion__link--external');
+      }
+      // By default we want the component unstyled.
+      // But overridable via prop.
+      commonProps.unstyled = item.unstyled !== false;
+
+      if (item.className) {
+        const list = item.className.split(" ");
+        classNameList = classNameList.concat(list);
+      }
+      commonProps.className = `${classNameList.join(' ')}`;
+
+      listItem = (<Button  {...commonProps}>
+        {item.title}
+      </Button>);
       // Recursive part
       if (item.children && item.children.length > 0) {
         listItem = (<Balloon
             prefix="accordionExpander"
             className={`accordion__level${level}`}
             unstyled
-            key={`${item.title}-${item.href}-level${level}`}
+            key={`level${level}-${i}`}
           >
           {listItem}
           <List>
