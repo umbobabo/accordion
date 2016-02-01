@@ -12,7 +12,7 @@ describe(`An Accordion`, () => {
       Accordion.should.be.a('function').and.respondTo('render');
     });
     it('renders a React element', () => {
-      React.isValidElement(<Accordion list={context}/>).should.equal(true);
+      React.isValidElement(<Accordion list={[context]}/>).should.equal(true);
     });
   });
 });
