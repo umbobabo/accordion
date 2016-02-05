@@ -33,6 +33,10 @@ export default class Accordion extends React.Component {
         commonProps.icon.icon = "down";
       }
 
+      if (item.i13nModel) {
+        commonProps.i13nModel = item.i13nModel;
+      }
+
       if (item.target) {
         commonProps.target = item.target;
       }
