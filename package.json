@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-accordion",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Accordion component",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
@@ -131,7 +131,7 @@
     "watch": "parallelshell 'npm run doc:watch' 'npm run prepublish:watch' 'npm run serve'"
   },
   "dependencies": {
-    "@economist/component-balloon": "^1.2.0",
+    "@economist/component-balloon": "^2.0.0",
     "@economist/component-grid": "^1.2.2",
     "@economist/component-link-button": "^2.0.0",
     "@economist/component-list": "^1.0.0",
