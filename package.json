@@ -143,6 +143,7 @@
     "@economist/component-icon": "^5.0.0",
     "@economist/component-sections-card": "^1.0.7",
     "babel": "^5.8.23",
+    "babel-core": "^5.8.35",
     "babelify": "^6.3.0",
     "browser-sync": "^2.8.2",
     "browserify": "^12.0.1",
