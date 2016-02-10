@@ -64,8 +64,8 @@ export default class Accordion extends React.Component {
             className={`accordion__level${level}`}
             unstyled
             key={`level${level}-${i}`}
+            trigger={listItem}
           >
-          {listItem}
           <List>
             {this.renderListContent(item.children, level)}
           </List>
