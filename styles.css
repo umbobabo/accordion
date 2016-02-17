@@ -1,6 +1,10 @@
 @import '@economist/component-typography';
 @import '@economist/component-palette';
 
+.accordion {
+  font-size: 1rem;
+}
+
 .accordion__link {
   padding: var(--accordion__link-padding, 0.8em);
   color: var(--accordion__link-color, var(--color-beijing));
@@ -13,7 +17,7 @@
 
 .accordion > .list__item,
 .accordion__link {
-  font-size: var(--text-size-step--1);
+  font-size: var(--text-size-step-0);
 }
 
 .accordion > .list__item {
@@ -23,7 +27,7 @@
 .accordion > .list__item .list__item {
   font-weight: normal;
   text-indent: 1em;
-  font-size: var(--text-size-step--2);
+  font-size: var(--text-size-step--1);
 }
 
 .accordion .list__item svg {
